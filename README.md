@@ -2,9 +2,9 @@
 
 or alternatively *What they forgot to teach you about teaching R*
 
-- Latin R
-- R Day Medellin
-- Cardiff SatRdays
+- Latin R - 26 Sep 2019
+- R Day Medellin - 9 Nov 2019
+- Cardiff SatRdays - 16 Nov 2019
 
 ## Abstract
 
