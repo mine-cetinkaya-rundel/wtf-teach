@@ -1,11 +1,25 @@
 ---
 title: "Intro Data Science"
-output: 
+resource_files:
+- www/Aslanbek Pelle.png
+- www/Chike Kravitz.png
+- www/Devan Alamanni.png
+- www/Fabian Grant.png
+- www/Hersilia Haakonsson.png
+- www/Karaugh Vaughn.png
+- www/Maui Thrussell.png
+- www/Neemias Vemulakonda.png
+- www/Shaniqua Santiago.png
+- www/Silver Leroy.png
+- www/Terry Gasper.png
+- www/Vin Nardo.png
+- www/Tivoli Adamo.png
+runtime: shiny
+output:
   flexdashboard::flex_dashboard:
     orientation: rows
-    source_code: https://git.io/vaZdx
+    source_code: https://github.com/mine-cetinkaya-rundel/wtf-teach/blob/master/student-dashboard/student-dashboard.Rmd
     theme: bootstrap
-runtime: shiny
 ---
 
 ```{r setup, include=FALSE}
@@ -65,8 +79,8 @@ selected_student <- reactive({
 
 ```{r}
 renderImage(
-  list(src = paste0("photos/", input$student, ".jpg"),
-       contentType = 'image/png',
+  list(src = paste0("www/", input$student, ".png"),
+       contentType = "image/png",
        width = 230),
   deleteFile = FALSE
 )
