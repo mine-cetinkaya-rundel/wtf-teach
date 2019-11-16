@@ -1,0 +1,31 @@
+regular expression (strings regex)
+At the beginning there was a lot of information on the internet and I didn't know where to start learning
+Too much focus on rules, syntax and the "mechanics" of the language, and not much about what we could actually do with the language, what we could build, why were we learning all those rules, what was the underlying philosophy of the language and why those "mechanics" were set up in that particular way.
+To find good examples for complicated topics; e.g. * pointers or dynamic memory in C * cleaning data in R / python
+understanding the difference between data frame and matrix
+gather and spread
+I don't know any programming language
+Understand chunks
+The most challenging was indeed the logic. I was not taught about "ifs", "loops"... Etc before my first programming course.
+Getting stuck due to errors (e. g. when setting up the environment) that even the instructor couldn't solve
+We are going to learn how to print "Hello World"
+Async programming
+Setup / installation
+The fact that sometimes the speaker makes references to obvious knowledge
+Loops. Using basic. 1986
+I didn't spoke English at the time ...
+For R, it was starting with the boring and most difficult stuff first
+Change the way of thinking the elements in the program
+Thinking in terms of algorithms for the first time
+Do it sth myself, without copy paste...
+Sometimes they wouldn't explain why things would work in R, because it was in a class of statistics
+technology setup :p
+The logic
+Having to write a code from scratch (blank page)
+It was when teacher explains in technical terms which he only knew.
+They didn't consider the learning curve.
+I had nobody to talk to and StackOverflow did not exist.
+I didn't know what the purpose was
+Understand error
+It was a MOOC
+My english is not very good
