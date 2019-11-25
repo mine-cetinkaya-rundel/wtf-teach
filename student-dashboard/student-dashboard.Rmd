@@ -22,16 +22,26 @@ output:
     theme: bootstrap
 ---
 
-```{r setup, include=FALSE}
+```{r setup}
 library(flexdashboard)
 library(tidyverse)
 library(wordcloud)
 library(tidytext)
+```
 
-student_survey <- read_csv("Getting to know you (Responses) - Form Responses 1.csv") %>%
-  select(-Timestamp)
+Individual students
+=======================================================================
+
+Inputs {.sidebar}
+-----------------------------------------------------------------------
+
+```{r}
+student_survey <- read_csv("Getting to know you (Responses) - Form Responses 1.csv")
+
+print(nrow(student_survey))
 
 names(student_survey) <- c(
+  "timestamp",
   "id", 
   "name",
   "preferred_name",
@@ -53,16 +63,25 @@ names(student_survey) <- c(
   "photo"
 )
 
+print(nrow(student_survey))
+
 student_survey <- student_survey %>%
   arrange(name)
+
+print(nrow(student_survey))
+print(student_survey$name)
+
+renderText({
+  paste("nrow(student_survey):", nrow(student_survey))
+})
+
+renderText({
+  paste("students:", paste(student_survey$name, collapse = ", "))
+})
+
+print(nrow(student_survey))
+
 ```
-
-
-Individual students
-=======================================================================
-
-Inputs {.sidebar}
------------------------------------------------------------------------
 
 ```{r}
 selectInput(inputId = "student",
@@ -92,9 +111,17 @@ Row
 ### Preferred name {.value-box}
 
 ```{r}
+
 renderValueBox({
   preferred_name <- selected_student() %>%
     select(preferred_name)
+print(paste("input$student:", input$student))
+print(selected_student())
+print(which(student_survey$name == input$student))
+print(paste("nrow_2: ", nrow(student_survey)))
+print(student_survey$name)
+print(student_survey$name == input$student)
+print(preferred_name)
   valueBox(
     value = preferred_name,
     icon = "fa-portrait"
@@ -137,6 +164,7 @@ Row
 
 ### Hope to learn... {data-width=200}
 
+
 ```{r}
 renderText(selected_student()$learn_goal)
 ```
@@ -159,6 +187,10 @@ Row
 ### Anything else you would like me to know about you? {data-width=500}
 
 ```{r}
+student_survey
+```
+
+```{r}
 renderText(selected_student()$know_other)
 ```
 
@@ -166,6 +198,13 @@ Row
 -----------------------------------------------------------------------
 
 ### Something cool / unique about yourself {data-width=200}
+
+```{r}
+renderTable({
+  student_survey
+})
+```
+
 
 ```{r}
 renderText(selected_student()$unique)
